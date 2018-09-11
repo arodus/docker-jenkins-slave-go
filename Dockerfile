@@ -15,5 +15,9 @@ RUN apt-get update && apt-get install -y rsync make \
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
+USER jenkins
+ENV GOPATH /home/jenkins/go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
+USER root
 
